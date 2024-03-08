@@ -83,16 +83,45 @@ public class Sorting {
         return arr;
     }
 
+    public static int pivotDropper(int[] arr, int low, int high) {
+        int pivot = arr[low];
+        int i = low; int j = high;
+        while(i<j) {
+            while(arr[i] <= arr[pivot] && i<=high - 1) i++;
+
+            while(arr[j] > arr[pivot] && j>=low + 1) j--;
+
+
+            if(i<j) BasicFunction.swapNumbers(arr[i], arr[j]);
+        }
+        BasicFunction.swapNumbers(arr[low], arr[j]);
+
+        return j;
+    }
+    public static int[] quickSort(int[] arr, int low, int high) {
+        if(low >= high) {
+            return arr;
+        } else {
+            int partitioner = pivotDropper(arr, low, high);
+            quickSort(arr, low, partitioner-1);
+            quickSort(arr, partitioner+1, high);
+
+        }
+        return arr;
+    }
+
     public static void main(String[] args) {
         int[] arr = new int[]{5,4,7,1,3,2};
         int length = arr.length;
 
-        System.out.println(Arrays.toString(bubbleSort(arr, length)));
+        System.out.println("Arrays sorted with Bubble Sort " + Arrays.toString(bubbleSort(arr, length)));
 
-        System.out.println(Arrays.toString(mergeSort(arr, 0, 5)));
+        System.out.println("Arrays sorted with Merge Sort " + Arrays.toString(mergeSort(arr, 0, 5)));
 
-        System.out.println(Arrays.toString(insertionSort(arr, length)));
+        System.out.println("Arrays sorted with Insertion Sort " + Arrays.toString(insertionSort(arr, length)));
 
-        System.out.println(Arrays.toString(selectionSort(arr, length)));
+        System.out.println("Arrays sorted with Selection Sort " + Arrays.toString(selectionSort(arr, length)));
+
+        System.out.println("Arrays sorted with Quick Sort " + Arrays.toString((quickSort(arr, 0, 5))));
     }
 }
