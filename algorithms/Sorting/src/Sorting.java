@@ -1,4 +1,8 @@
-import java.util.*;
+import java.util.Arrays;
+
+import static BasicFunctions.Basics.swapNumbers;
+
+
 public class Sorting {
 
     public static int[] bubbleSort(int[] arr, int len) {
@@ -92,9 +96,9 @@ public class Sorting {
             while(arr[j] > arr[pivot] && j>=low + 1) j--;
 
 
-            if(i<j) BasicFunction.swapNumbers(arr[i], arr[j]);
+            if(i<j) swapNumbers(arr[i], arr[j]);
         }
-        BasicFunction.swapNumbers(arr[low], arr[j]);
+                swapNumbers(arr[low], arr[j]);
 
         return j;
     }

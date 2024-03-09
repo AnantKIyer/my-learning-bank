@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Algorithms/BasicFunctions/BasicFunctions.iml" filepath="$PROJECT_DIR$/Algorithms/BasicFunctions/BasicFunctions.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Algorithms/Sorting/Sorting.iml" filepath="$PROJECT_DIR$/Algorithms/Sorting/Sorting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Problems/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Problems/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithms/BasicFunctions/BasicFunctions.iml" filepath="$PROJECT_DIR$/algorithms/BasicFunctions/BasicFunctions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Problems/Problems.iml" filepath="$PROJECT_DIR$/Problems/Problems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithms/Sorting/Sorting.iml" filepath="$PROJECT_DIR$/algorithms/Sorting/Sorting.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/my-learning-bank.iml" filepath="$PROJECT_DIR$/.idea/my-learning-bank.iml" />
     </modules>
   </component>
